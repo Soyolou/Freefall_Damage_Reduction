@@ -1,0 +1,12 @@
+# Fdb version 3
+["latex"] 1675806860 "thesis.tex" "thesis.dvi" "thesis" 1675806860
+  "/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-dvips.def" 1642022539 35666 245843706ef8bde3dc5fcca41b43ec1e ""
+  "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
+  "/usr/local/texlive/2021/texmf-var/web2c/pdftex/latex.fmt" 1643840037 1405630 95264eefa130a8556dabdf4dc2026c60 ""
+  "/usr/local/texlive/2021/texmf.cnf" 1643840033 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "thesis.aux" 1675806860 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "thesis.tex" 1675806855 115 def8d117911e53ccfdd726dc56a703eb ""
+  (generated)
+  "thesis.aux"
+  "thesis.dvi"
+  "thesis.log"
