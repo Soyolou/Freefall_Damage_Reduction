@@ -1,0 +1,2 @@
+{"time/episodes": 1, "rollout/ep_rew_mean": -38.939764, "rollout/ep_len_mean": 801.0, "time/fps": 758, "time/time_elapsed": 1, "time/total_timesteps": 801}
+{"train/learning_rate": 0.001, "train/n_updates": 801, "train/actor_loss": -5.8176151897064114, "train/critic_loss": 0.042920338855265694, "time/episodes": 2, "rollout/ep_rew_mean": -129.48884149999998, "rollout/ep_len_mean": 801.0, "time/fps": 110, "time/time_elapsed": 14, "time/total_timesteps": 1602}
