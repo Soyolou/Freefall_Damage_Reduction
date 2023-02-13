@@ -175,3 +175,15 @@ Docker seem to be working fine on my machine.
 
 Just pulled the docker image specified on this git repo. Don't know what is the next step.
 https://github.com/nitac-info/nitac-texlive-ja
+
+
+
+# 2023/02/13
+
+### Logging
+
+tried to implement simple logger in my environment directly with csv. But things are pretty annoying since you have to make everyhing one dimentional and flat, even though pretty much every output is multi-dimentional. So i am looking out for other alternatives than csv.
+
+I turn out that SB3 has logger after all. Here is a link: 
+https://stable-baselines3.readthedocs.io/en/master/common/logger.html 
+I didn't really know what is tensorboard and stdout stand for so i have to look that up.
