@@ -1,7 +1,7 @@
 #Simulation
 FROM python:3.10
 
-WORKDIR /simulation
+WORKDIR /
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir --upgrade -r requirements.txt

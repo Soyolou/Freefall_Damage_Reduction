@@ -187,3 +187,41 @@ tried to implement simple logger in my environment directly with csv. But things
 I turn out that SB3 has logger after all. Here is a link: 
 https://stable-baselines3.readthedocs.io/en/master/common/logger.html 
 I didn't really know what is tensorboard and stdout stand for so i have to look that up.
+
+### inconsistent step per episode
+
+Step number per episode is inconsistent. I am not really sure if it is a problem or could be a problem in future. But i decided to ignore it. This can't be the priority for now.
+
+### dealing with logger
+
+I implemented the logger thing and it was easy. I did it like this.
+     logger = configure("/tmp/", ["stdout", "csv", "tensorboard"]) 
+I was getting no result and the tmp file was empty. Soon i found out that /tmp was absolute path. It was dumb mistake but took me legit 30 minutes to figure it out.
+
+Also i couldn't figure out a way to specify directories in Tensorboard so i guess i will just log in my current directory, which is default in Tensorboard
+
+after some research i came to the conclution that i am not gonna use tensorboard. It is gonna take quite a time, which i can't really afford right now and It seems like i am probably better off with csv because it is felxible.
+
+ ### Randomizing the initial conditions
+
+couldn't figure out how to add random initial forces. 
+But i found and fun alternative that might help. 
+Here is that alternative in steps:
+1. set gravity to 0
+2. input random control paramaters
+3. set garvity back to normal
+
+before implementing this i have to do 2 things:
+
+1. I have to set the initial position of the model so that the model can still experience free-fall after random control input
+2. I have to make sure that models position doesn't change too much because of the random control input(after all it is all controlled environment)
+
+was able to implement it. Just dedicated the very first second of the simulation to randomize everything. Saved a video named 1second_fall.mp4 (it looks like a moon walk when gravity is of).
+But it seems like the height is not enough, as i suspected. Still can't figure out a way to change the initial condition. when i last tried to change the torso position everything went nuts.
+
+just found out what is the keyframe is 
+https://mujoco.readthedocs.io/en/latest/XMLreference.html?highlight=keyframe#keyframe 
+my lack of understanding of a physics engine is causing a lot of problems.
+
+
+
