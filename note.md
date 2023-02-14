@@ -223,5 +223,34 @@ just found out what is the keyframe is
 https://mujoco.readthedocs.io/en/latest/XMLreference.html?highlight=keyframe#keyframe 
 my lack of understanding of a physics engine is causing a lot of problems.
 
+finally reset danromizes things. 
+But it is i desided to invert gravity for a little to make it fall from little bit high-up.
+
+tweaked the keyframe torso orentation a little bit and made it fall from the head. After all we are trying to see if it can protect the head or not.
 
 
+### Designing the Reward function
+
+Some say Reward function is the Core of the RL, some say if machines can write optimal reward function, we are doomed. Regardless of the factuality of the 2 statements one thing is true "Reward function is important".
+Unfortunately my reward function is rather lazy. It simply adds the speed of the head geom and makes it a negative reward. 
+ 
+I tried making it the speed at the moment in which the model's head makes the first contact to a negative reward. Can't figure out a way to just only detect the contact or model's head's position relative to the ground. Tried using "contact/pairs" in xml but when i change the collision detection mode "all" to "predefined"  simultaneously stops the over all collision of all the geom except head.
+
+after some time contemplating about reward function. I decided to just go with "speed of head geom"="negative reward". But I added a little twist there. I also made sum of all the actions that the agent take a negative reward. So now the reward function is combination of that two. But the due to consideration of possibility that action's costly interfering with the agent's decisiveness, i gave action negative reward 0.1 discount.
+
+### Finally training
+
+Started training the model now. I couldn't figure out how to re-read the model. If i can't re-read it i will not bother saving it, Since i already messed up on size of the git repo before.
+But i somewhat logged the entire training. didn't really collected all the data that could have been collected.
+It collects:
+1. episode number
+2. step number 
+3. reward
+plus i use the default logger from SB3. It collects the learning rate and stuff, which i am not too familiar with.
+
+Right now it is training. Training for 781*1000+1 steps. Hoping to get a 1000 episode. 
+From my estimate it is gonna take 5 hours.
+
+It is over. 
+Recorded 3 videos. after1000ep_1.mp4, after1000ep_2.mp4, after1000ep_3.mp4
+2 types log csv. after1000ep_data.csv after1000ep_progress.csv
