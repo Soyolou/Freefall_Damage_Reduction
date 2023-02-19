@@ -1,3 +1,5 @@
+# total time 56 hours
+
 # 2023/01/22   8 hours
   
 
@@ -66,7 +68,7 @@ When the head makes contact with ground, velocity of head is the minus reward.
 
 
 
-# 2023/01/28
+# 2023/01/28  10 hours
 
 ### 1
 During last session i realized that the code that i was running had some issues. It appears that my overall understanding of gym-env and model object in SB3's behavior is lacking. 
@@ -112,7 +114,7 @@ I want to be able to execute code remotely on the lab computer.
 In order to accomplish that I'm thinking of making a script that routinely check the git repo of the project ni every-once-in-a-while.
 and build the docker container and run it. 
 
-# 2023/02/02
+# 2023/02/02  8 hours
 
 
 ### 1 infinite loop mistake
@@ -126,7 +128,7 @@ In my Gym environment build up for the simplicity sake i made it minimal and did
 So i gotta figure out how i can do that in mujoco. That will probably take a quite some time and testing to implement, so I created testing.ipynb inside my new repo. Hoping that i am not gonna mess this up this time.
 
 
-# 2023/02/05
+# 2023/02/05  15 hours
 
 ### 1  Similar research
 
@@ -178,7 +180,7 @@ https://github.com/nitac-info/nitac-texlive-ja
 
 
 
-# 2023/02/13
+# 2023/02/13  20 hours
 
 ### Logging
 
